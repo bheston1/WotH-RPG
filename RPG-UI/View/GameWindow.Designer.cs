@@ -80,6 +80,7 @@
             lblLocation = new Label();
             label11 = new Label();
             panel2 = new Panel();
+            btnBag = new Button();
             ((System.ComponentModel.ISupportInitialize)pboCompass).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboMap).BeginInit();
             navPanel.SuspendLayout();
@@ -382,6 +383,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnBag);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label12);
             panel1.Controls.Add(cboItems);
@@ -627,6 +629,16 @@
             panel2.Size = new Size(714, 20);
             panel2.TabIndex = 30;
             // 
+            // btnBag
+            // 
+            btnBag.Image = (Image)resources.GetObject("btnBag.Image");
+            btnBag.Location = new Point(355, 11);
+            btnBag.Name = "btnBag";
+            btnBag.Size = new Size(48, 48);
+            btnBag.TabIndex = 32;
+            btnBag.UseVisualStyleBackColor = true;
+            btnBag.Click += btnBag_Click;
+            // 
             // GameWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -723,5 +735,6 @@
         private PictureBox pboSpellsCombat;
         private Button btnItem;
         private Button btnSpell;
+        private Button btnBag;
     }
 }

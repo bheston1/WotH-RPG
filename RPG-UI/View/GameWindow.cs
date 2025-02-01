@@ -266,5 +266,10 @@ namespace RPG_UI
                 lblManaCost.Text = $"{selected.ManaCost} mana";
             }
         }
+
+        private void btnBag_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

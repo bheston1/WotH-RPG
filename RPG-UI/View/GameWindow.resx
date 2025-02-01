@@ -186,6 +186,30 @@
         iQY624Zr7mLswO+nipNK3QYjHgioAITrDwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnBag.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAABCdJREFUWEe1mHmoVVUUh69paWKGU2YllWWlJkaCEIkgQaTNZhkaFYpm5BBOVE5g
+        ZNMf5dRIOWSWDaCi4h+aGqWFqKWm5pBUqKTmENm/9n3n3u07PK7vnen94OPdfe67+6y99lprD6WE6giv
+        wik4Dg9CUt0Hf8FpeBOuhdy6BF6EI/AdjIZ3YB9cD/XJAe2B9+E5+BbsazLYd2Y9AsdgPLT1AWoNu2Fa
+        1Kpbk+BXaBe1yr8dC3pwsA+y6gPQO1dErRq9AL7QF6lGcHEFP6vLwQFMiVo1agX2uSpqZdRqOAejolaN
+        2sBOmA164CNYDssqn332FmhYe4hrONjnL3CRD9LKkX8DTuWPoDGqE+iFf+AMGHuLwdgTP/vM7/4Fp/xG
+        UHrre/gNtlfaqdUEfMF7sAOeAeNCL/wOxs/tcCnUVnPoCRPhD9gLT8CwymeN/QGuhtRqDFvhaTD4/4O/
+        YR7EY87Avg3uhrugG8Q94VQ65ZYZ+3gJLDeGQpiFVHL+TW/LxQxw6oZC0EPwFewHp2YXGDcHQa/Oh3sg
+        6Emwj1fAsrMFTJZMWgKHwOl43AeoC6wAY+9TMJjvBJ/rrb4wBr6GE2BC9AA1COzLwfh9yODUehnMoOlR
+        q1TqDXpkA9zhgzqkx/vAWjAm9bCaCvb5RtTKqI9hM+jym8Ap+wxaQFKZCCHGjENlnwvLH9PrBtDlT4GG
+        rYSN0BKyyOw+ACaOYaHnQxlJpXFgQDcDY+MoWAKyygGZ5dY6Pf4zmO2p9TlYLK1Ta8DlKa8c4J/QHVwh
+        fEcqGReWCtPajDsJZltcBv8IsPBW41m4F+K7CGueBXYCuGyZRL4rsa4C3T4QesEsqL18rAOzqy5Mls4Q
+        1/NgTRsC1jLflVhu5owBXX8hbYJqxsQ5DLdCNT0KP8F1USuhkhhmlllALQMW29r4nTUs7ONq6zFoEMNc
+        5C8DM6waftcULqTCDOsABuxc0Ftz4O16sLC+Cy78Bnx8v1+IYdeABdZU/xKs/ksTYkkQE2E9hKJaiGGO
+        1vXOxdgpdEuUlpvB7bjrr8oV/P5YfQjuNPLKMPii/LE0AHIb5vHL/X9XsC65oN+SAr0lDi5U+0IMM4jd
+        v3tGdDPoRlBsJyH8v+eABaAKMczMstLfD+4wXDvdRvdPiDvZfmAChZAoxDAXcPdmahFoaBZ5pDNTVWGG
+        udNQD1TIImtf4YY5BZkOqDEVbpjlwoOH9SiP3KUUWi40LIw0j1yaCjEsVH4vUartrdLIZc2SMTNqlQed
+        27ArwXXOM4DrpJn5SUL8X39jf14LhHu1TGulP/a+QncHedT3eO+LxONXEsIgPJvqtaCHQWOTXACel/de
+        28DFu6Fk327fU9/4vAbG1UiwalvB/ZuH0IcHFa8evNdNLY9tr4MXwmfBm5oisC/7dODVrrBQqfQ/ePZa
+        JIm7biIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
