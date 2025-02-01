@@ -42,8 +42,6 @@
             saveGameToolStripMenuItem = new ToolStripMenuItem();
             loadGameToolStripMenuItem = new ToolStripMenuItem();
             closeGameToolStripMenuItem = new ToolStripMenuItem();
-            guideToolStripMenuItem = new ToolStripMenuItem();
-            openGuideToolStripMenuItem = new ToolStripMenuItem();
             playerInfoPanel = new Panel();
             lblPlayerEssence = new Label();
             label1 = new Label();
@@ -187,7 +185,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, guideToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(738, 24);
@@ -204,34 +202,21 @@
             // saveGameToolStripMenuItem
             // 
             saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            saveGameToolStripMenuItem.Size = new Size(136, 22);
+            saveGameToolStripMenuItem.Size = new Size(180, 22);
             saveGameToolStripMenuItem.Text = "Save game";
             // 
             // loadGameToolStripMenuItem
             // 
             loadGameToolStripMenuItem.Name = "loadGameToolStripMenuItem";
-            loadGameToolStripMenuItem.Size = new Size(136, 22);
+            loadGameToolStripMenuItem.Size = new Size(180, 22);
             loadGameToolStripMenuItem.Text = "Load game";
             // 
             // closeGameToolStripMenuItem
             // 
             closeGameToolStripMenuItem.Name = "closeGameToolStripMenuItem";
-            closeGameToolStripMenuItem.Size = new Size(136, 22);
+            closeGameToolStripMenuItem.Size = new Size(180, 22);
             closeGameToolStripMenuItem.Text = "Close game";
             closeGameToolStripMenuItem.Click += closeGameToolStripMenuItem_Click;
-            // 
-            // guideToolStripMenuItem
-            // 
-            guideToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openGuideToolStripMenuItem });
-            guideToolStripMenuItem.Name = "guideToolStripMenuItem";
-            guideToolStripMenuItem.Size = new Size(44, 20);
-            guideToolStripMenuItem.Text = "Help";
-            // 
-            // openGuideToolStripMenuItem
-            // 
-            openGuideToolStripMenuItem.Name = "openGuideToolStripMenuItem";
-            openGuideToolStripMenuItem.Size = new Size(136, 22);
-            openGuideToolStripMenuItem.Text = "Open guide";
             // 
             // playerInfoPanel
             // 
@@ -699,8 +684,6 @@
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem saveGameToolStripMenuItem;
         private ToolStripMenuItem loadGameToolStripMenuItem;
-        private ToolStripMenuItem guideToolStripMenuItem;
-        private ToolStripMenuItem openGuideToolStripMenuItem;
         private Panel playerInfoPanel;
         private ProgressBar playerHealthBar;
         private Label lblPlayerName;

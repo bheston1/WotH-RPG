@@ -48,8 +48,6 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             closeGameToolStripMenuItem = new ToolStripMenuItem();
-            helpToolStripMenuItem = new ToolStripMenuItem();
-            openGuideToolStripMenuItem = new ToolStripMenuItem();
             panel4 = new Panel();
             lblMonsterHealth = new Label();
             lblPlayerHealthCombat = new Label();
@@ -236,7 +234,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(928, 24);
@@ -253,22 +251,9 @@
             // closeGameToolStripMenuItem
             // 
             closeGameToolStripMenuItem.Name = "closeGameToolStripMenuItem";
-            closeGameToolStripMenuItem.Size = new Size(136, 22);
+            closeGameToolStripMenuItem.Size = new Size(180, 22);
             closeGameToolStripMenuItem.Text = "Close game";
             closeGameToolStripMenuItem.Click += closeGameToolStripMenuItem_Click;
-            // 
-            // helpToolStripMenuItem
-            // 
-            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openGuideToolStripMenuItem });
-            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
-            helpToolStripMenuItem.Text = "Help";
-            // 
-            // openGuideToolStripMenuItem
-            // 
-            openGuideToolStripMenuItem.Name = "openGuideToolStripMenuItem";
-            openGuideToolStripMenuItem.Size = new Size(136, 22);
-            openGuideToolStripMenuItem.Text = "Open guide";
             // 
             // panel4
             // 
@@ -489,8 +474,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem closeGameToolStripMenuItem;
-        private ToolStripMenuItem helpToolStripMenuItem;
-        private ToolStripMenuItem openGuideToolStripMenuItem;
         private Panel panel4;
         private Label lblMonsterHealth;
         private Label lblPlayerHealthCombat;
