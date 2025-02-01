@@ -159,7 +159,7 @@ namespace RPG_UI
         private void btnCamp_Click(object sender, EventArgs e)
         {
             Controller.Player.Rest();
-            rtbLog.Text = "You set up camp and rest for awhile.\nHealth and mana restored. Status cleared.";
+            rtbLog.Text = "You set up camp and rest for awhile.\nHealth and mana restored.";
             UpdateGUI();
         }
 
@@ -172,7 +172,8 @@ namespace RPG_UI
 
         private void btnCrafting_Click(object sender, EventArgs e)
         {
-
+            CraftingWindow craftingWindow = new(Controller.Player, this);
+            craftingWindow.Show();
         }
 
         private void btnQuests_Click(object sender, EventArgs e)
