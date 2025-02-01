@@ -14,7 +14,7 @@ namespace Engine.Model
         public int? StatusChance { get; set; }
         public int CritChanceBonus { get; set; }
 
-        public Weapon(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, int minDamage, int maxDamage, string? weaponEffect, int critChanceBonus) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient)
+        public Weapon(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, int minDamage, int maxDamage, string? weaponEffect, int critChanceBonus, bool usedForCrafting) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient, usedForCrafting)
         {
             MinDamage = minDamage;
             MaxDamage = maxDamage;

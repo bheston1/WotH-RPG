@@ -11,7 +11,7 @@ namespace Engine.Model
         public string? Effect { get; set; }
         public bool IsCombatItem { get; set; }
 
-        public Consumable(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, string? effect, bool isCombatItem) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient)
+        public Consumable(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, string? effect, bool isCombatItem, bool usedForCrafting) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient, usedForCrafting)
         {
             Effect = effect;
             IsCombatItem = isCombatItem;

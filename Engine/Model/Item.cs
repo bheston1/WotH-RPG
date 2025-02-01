@@ -14,8 +14,9 @@ namespace Engine.Model
         public int? DropChance { get; set; }
         public Item? FirstIngredient { get; set; }
         public Item? SecondIngredient{ get; set; }
+        public bool UsedForCrafting { get; set; }
 
-        public Item(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient)
+        public Item(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, bool usedForCrafting)
         {
             Name = name;
             InfoText = infoText;
@@ -23,6 +24,7 @@ namespace Engine.Model
             DropChance = dropChance;
             FirstIngredient = firstIngredient;
             SecondIngredient = secondIngredient;
+            UsedForCrafting = usedForCrafting;
         }
     }
 }

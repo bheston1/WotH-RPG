@@ -15,7 +15,7 @@ namespace Engine.Model
         public int CritChanceBonus { get; set; }
         public float SpellAdjBonus { get; set; }
 
-        public Jewelry(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, string effect, string slot, int defenseBonus, int magResistBonus, int critChanceBonus, float spellAdjBonus) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient)
+        public Jewelry(string name, string infoText, int? value, int? dropChance, Item? firstIngredient, Item? secondIngredient, string effect, string slot, int defenseBonus, int magResistBonus, int critChanceBonus, float spellAdjBonus, bool usedForCrafting) : base(name, infoText, value, dropChance, firstIngredient, secondIngredient, usedForCrafting)
         {
             Effect = effect;
             Slot = slot;
