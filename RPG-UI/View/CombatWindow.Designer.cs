@@ -251,7 +251,7 @@
             // closeGameToolStripMenuItem
             // 
             closeGameToolStripMenuItem.Name = "closeGameToolStripMenuItem";
-            closeGameToolStripMenuItem.Size = new Size(180, 22);
+            closeGameToolStripMenuItem.Size = new Size(136, 22);
             closeGameToolStripMenuItem.Text = "Close game";
             closeGameToolStripMenuItem.Click += closeGameToolStripMenuItem_Click;
             // 
