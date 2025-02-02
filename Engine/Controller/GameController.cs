@@ -48,6 +48,8 @@ namespace Engine.Controller
 
         // TODO: Player XP/level system
 
+        // TODO: Implement status effect system
+
         // TODO: All balancing is fucked. Do a proper go at adjusting stats on player, monsters, items, spells, etc.
         // also make sure spell caster monsters have their spells in list, or will crash during combat if they try to cast
 

@@ -58,6 +58,7 @@
             btnQuests = new Button();
             btnTalk = new Button();
             panel1 = new Panel();
+            btnSearch = new Button();
             btnBag = new Button();
             panel3 = new Panel();
             label10 = new Label();
@@ -69,12 +70,9 @@
             pboSpellsCombat = new PictureBox();
             btnItem = new Button();
             btnSpell = new Button();
-            label8 = new Label();
             pboCraft = new PictureBox();
             btnCrafting = new Button();
-            label9 = new Label();
             btnCamp = new Button();
-            label7 = new Label();
             btnEquipment = new Button();
             pboGear = new PictureBox();
             label4 = new Label();
@@ -363,7 +361,7 @@
             // 
             btnQuests.Font = new Font("Papyrus", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnQuests.Image = (Image)resources.GetObject("btnQuests.Image");
-            btnQuests.Location = new Point(409, 65);
+            btnQuests.Location = new Point(465, 12);
             btnQuests.Name = "btnQuests";
             btnQuests.Size = new Size(48, 48);
             btnQuests.TabIndex = 32;
@@ -373,7 +371,7 @@
             // btnTalk
             // 
             btnTalk.Image = (Image)resources.GetObject("btnTalk.Image");
-            btnTalk.Location = new Point(409, 11);
+            btnTalk.Location = new Point(411, 65);
             btnTalk.Name = "btnTalk";
             btnTalk.Size = new Size(48, 48);
             btnTalk.TabIndex = 9;
@@ -383,6 +381,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnBag);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label12);
@@ -392,13 +391,10 @@
             panel1.Controls.Add(pboSpellsCombat);
             panel1.Controls.Add(btnItem);
             panel1.Controls.Add(btnSpell);
-            panel1.Controls.Add(label8);
             panel1.Controls.Add(btnQuests);
             panel1.Controls.Add(pboCraft);
             panel1.Controls.Add(btnCrafting);
-            panel1.Controls.Add(label9);
             panel1.Controls.Add(btnCamp);
-            panel1.Controls.Add(label7);
             panel1.Controls.Add(btnEquipment);
             panel1.Controls.Add(pboGear);
             panel1.Controls.Add(btnTalk);
@@ -407,10 +403,20 @@
             panel1.Size = new Size(528, 180);
             panel1.TabIndex = 10;
             // 
+            // btnSearch
+            // 
+            btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
+            btnSearch.Location = new Point(465, 65);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(48, 48);
+            btnSearch.TabIndex = 32;
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
             // btnBag
             // 
             btnBag.Image = (Image)resources.GetObject("btnBag.Image");
-            btnBag.Location = new Point(355, 11);
+            btnBag.Location = new Point(411, 11);
             btnBag.Name = "btnBag";
             btnBag.Size = new Size(48, 48);
             btnBag.TabIndex = 32;
@@ -517,16 +523,6 @@
             btnSpell.UseVisualStyleBackColor = true;
             btnSpell.Click += btnSpell_Click;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Papyrus", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(460, 64);
-            label8.Name = "label8";
-            label8.Size = new Size(64, 50);
-            label8.TabIndex = 33;
-            label8.Text = "Quest\r\nLog";
-            // 
             // pboCraft
             // 
             pboCraft.Image = (Image)resources.GetObject("pboCraft.Image");
@@ -547,35 +543,15 @@
             btnCrafting.UseVisualStyleBackColor = true;
             btnCrafting.Click += btnCrafting_Click;
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Papyrus", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(460, 131);
-            label9.Name = "label9";
-            label9.Size = new Size(50, 25);
-            label9.TabIndex = 27;
-            label9.Text = "Rest";
-            // 
             // btnCamp
             // 
             btnCamp.Image = (Image)resources.GetObject("btnCamp.Image");
-            btnCamp.Location = new Point(409, 119);
+            btnCamp.Location = new Point(438, 119);
             btnCamp.Name = "btnCamp";
             btnCamp.Size = new Size(48, 48);
             btnCamp.TabIndex = 24;
             btnCamp.UseVisualStyleBackColor = true;
             btnCamp.Click += btnCamp_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Papyrus", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(460, 23);
-            label7.Name = "label7";
-            label7.Size = new Size(49, 25);
-            label7.TabIndex = 25;
-            label7.Text = "Talk";
             // 
             // btnEquipment
             // 
@@ -715,8 +691,6 @@
         private Button btnCrafting;
         private PictureBox pboCraft;
         private Button btnCamp;
-        private Label label7;
-        private Label label9;
         private ToolStripMenuItem closeGameToolStripMenuItem;
         private Label lblLocation;
         private Label label11;
@@ -724,7 +698,6 @@
         private Label lblPlayerEssence;
         private Label label1;
         private Button btnQuests;
-        private Label label8;
         private Panel panel3;
         private Label label10;
         private Label lblManaCost;
@@ -736,5 +709,6 @@
         private Button btnItem;
         private Button btnSpell;
         private Button btnBag;
+        private Button btnSearch;
     }
 }
