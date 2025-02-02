@@ -58,6 +58,7 @@
             btnQuests = new Button();
             btnTalk = new Button();
             panel1 = new Panel();
+            btnBag = new Button();
             panel3 = new Panel();
             label10 = new Label();
             lblManaCost = new Label();
@@ -80,7 +81,6 @@
             lblLocation = new Label();
             label11 = new Label();
             panel2 = new Panel();
-            btnBag = new Button();
             ((System.ComponentModel.ISupportInitialize)pboCompass).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboMap).BeginInit();
             navPanel.SuspendLayout();
@@ -407,6 +407,16 @@
             panel1.Size = new Size(528, 180);
             panel1.TabIndex = 10;
             // 
+            // btnBag
+            // 
+            btnBag.Image = (Image)resources.GetObject("btnBag.Image");
+            btnBag.Location = new Point(355, 11);
+            btnBag.Name = "btnBag";
+            btnBag.Size = new Size(48, 48);
+            btnBag.TabIndex = 32;
+            btnBag.UseVisualStyleBackColor = true;
+            btnBag.Click += btnBag_Click;
+            // 
             // panel3
             // 
             panel3.Controls.Add(label10);
@@ -628,16 +638,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(714, 20);
             panel2.TabIndex = 30;
-            // 
-            // btnBag
-            // 
-            btnBag.Image = (Image)resources.GetObject("btnBag.Image");
-            btnBag.Location = new Point(355, 11);
-            btnBag.Name = "btnBag";
-            btnBag.Size = new Size(48, 48);
-            btnBag.TabIndex = 32;
-            btnBag.UseVisualStyleBackColor = true;
-            btnBag.Click += btnBag_Click;
             // 
             // GameWindow
             // 

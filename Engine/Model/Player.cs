@@ -344,24 +344,5 @@ namespace Engine.Model
                 CurrentLocation = targetRoom;
             }
         }
-
-        public Item? CraftItem(Item item1,  Item item2)
-        {
-            foreach (Item item in ItemManager.CraftableItems)
-            {
-                if (item.FirstIngredient == item1 &&  item.SecondIngredient == item2)
-                {
-                    if (item is Weapon) return item as Weapon;
-                    if (item is Armor) return item as Armor;
-                    if (item is Jewelry) return item as Jewelry;
-                    if (item is Consumable) return item as Consumable;
-                    else return item;
-                }
-                Inventory.Remove(item1);
-                Inventory.Remove(item2);
-                Inventory.Add(item);
-            }
-            return null;
-        }
     }
 }

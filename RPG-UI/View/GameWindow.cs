@@ -173,6 +173,7 @@ namespace RPG_UI
         private void btnCrafting_Click(object sender, EventArgs e)
         {
             CraftingWindow craftingWindow = new(Controller.Player, this);
+            Enabled = false;
             craftingWindow.Show();
         }
 

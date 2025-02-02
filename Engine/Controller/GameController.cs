@@ -23,6 +23,8 @@ namespace Engine.Controller
             Player.Inventory.Add(ItemManager.smallHealthPotion);
             Player.Spells.Add(ItemManager.flame);
             Player.Spells.Add(ItemManager.heal);
+            Player.Inventory.Add(ItemManager.rope);
+            Player.Inventory.Add(ItemManager.bucket);
         }
 
         public bool MonsterFound()
@@ -43,8 +45,6 @@ namespace Engine.Controller
         }
 
         // TODO: Some form of fast travel e.g., an item that can move player between rest sites.
-
-        // TODO: Crafting system
 
         // TODO: Player XP/level system
 

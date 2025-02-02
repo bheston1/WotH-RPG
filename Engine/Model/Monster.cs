@@ -50,7 +50,7 @@ namespace Engine.Model
             ChanceToEscape = chanceToEscape;
         }
 
-        public object Clone() // monsters are static, so need this to get a new object each encounter
+        public object Clone() // from ICloneable: monsters are static, so need this to get a new object each encounter
         {
             return new Monster(Name, Health, MaxHealth, Mana, MaxMana, MinDamage, MaxDamage, SpellAdjust, CritChance, Defense, MagicResist, RewardXp, RewardEssence, EncounterChance, IsSpellCaster, ChanceToEscape)
             {
