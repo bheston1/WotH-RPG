@@ -179,7 +179,9 @@ namespace RPG_UI
 
         private void btnQuests_Click(object sender, EventArgs e)
         {
-
+            QuestLog questLog = new(Controller.Player, this);
+            Enabled = false;
+            questLog.Show();
         }
 
         private void btnSpell_Click(object sender, EventArgs e)
