@@ -448,11 +448,10 @@
             lblManaCost.AutoSize = true;
             lblManaCost.Dock = DockStyle.Right;
             lblManaCost.Font = new Font("Book Antiqua", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblManaCost.Location = new Point(196, 0);
+            lblManaCost.Location = new Point(212, 0);
             lblManaCost.Name = "lblManaCost";
-            lblManaCost.Size = new Size(16, 18);
+            lblManaCost.Size = new Size(0, 18);
             lblManaCost.TabIndex = 38;
-            lblManaCost.Text = "#";
             // 
             // label12
             // 

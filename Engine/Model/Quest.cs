@@ -14,8 +14,9 @@ namespace Engine.Model
         public int RewardEssence { get; set; }
         public Item? RewardItem { get; set; }
         public bool IsCompleted { get; set; }
+        public string? QuestStep { get; set; }
 
-        public Quest(string name, string infoText, int rewardExperience, int rewardEssence, bool isCompleted, Item? rewardItem = null)
+        public Quest(string name, string infoText, int rewardExperience, int rewardEssence, bool isCompleted, Item? rewardItem = null, string? questStep = null)
         {
             Name = name;
             InfoText = infoText;
@@ -23,6 +24,16 @@ namespace Engine.Model
             RewardEssence = rewardEssence;
             IsCompleted = isCompleted;
             RewardItem = rewardItem;
+            QuestStep = questStep;
+        }
+
+        public string GetQuestStep()
+        {
+            switch (QuestStep)
+            {
+                default:
+                    return "Nothing";
+            }
         }
     }
 }

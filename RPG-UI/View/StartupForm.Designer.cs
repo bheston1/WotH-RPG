@@ -31,6 +31,7 @@
             btnNewGame = new Button();
             btnLoadGame = new Button();
             btnQuit = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnNewGame
@@ -66,12 +67,22 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 189);
+            label1.Name = "label1";
+            label1.Size = new Size(206, 15);
+            label1.TabIndex = 3;
+            label1.Text = "*Saving/loading not yet implemented";
+            // 
             // StartupForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(332, 189);
+            ClientSize = new Size(332, 218);
             ControlBox = false;
+            Controls.Add(label1);
             Controls.Add(btnQuit);
             Controls.Add(btnLoadGame);
             Controls.Add(btnNewGame);
@@ -81,6 +92,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Whispers of the Hollow";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -88,5 +100,6 @@
         private Button btnNewGame;
         private Button btnLoadGame;
         private Button btnQuit;
+        private Label label1;
     }
 }

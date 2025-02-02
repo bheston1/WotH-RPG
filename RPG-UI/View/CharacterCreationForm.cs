@@ -40,7 +40,7 @@ namespace RPG_UI.View
         public CharacterCreationForm()
         {
             InitializeComponent();
-            rtbIntroText.Text = "Whispers of the Hollow is a dark fantasy text RPG set in a cursed world where you are drawn into an ancient forest known as the Hollow, a place of nightmares and forgotten gods. You must unravel the mysteries of the Hollow while facing both external horrors and internal demons. The game is divided into three acts, each with its own distinct atmosphere, characters, quests and threats.";
+            rtbIntroText.Text = "Whispers of the Hollow is a prototype idea/concept for a dark fantasy RPG. This version is a text-based game, and was originally intended to be broken up into three acts. The purpose of this project was to be a learning experience.";
         }
 
         private void btnConfirmName_Click(object sender, EventArgs e)

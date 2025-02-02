@@ -79,12 +79,9 @@ namespace RPG_UI.View
 
         private void Examine_Click(object sender, EventArgs e)
         {
-            if (_selectedItem != null)
+            if (_selectedItem != null && _selectedItem.Tag is Item item)
             {
-                if (_selectedItem.Tag is Item item)
-                {
-                    tbOutput.Text = $"{item.InfoText}";
-                }
+                tbOutput.Text = $"{item.InfoText}";
             }
         }
     }
