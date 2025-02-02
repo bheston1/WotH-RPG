@@ -270,7 +270,9 @@ namespace RPG_UI
 
         private void btnBag_Click(object sender, EventArgs e)
         {
-
+            InventoryPanel inventoryPanel = new(Controller.Player, this);
+            Enabled = false;
+            inventoryPanel.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
