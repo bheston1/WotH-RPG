@@ -17,6 +17,14 @@ namespace Engine.Controller
             MapManager.GenerateMap();
             ItemManager.PopulateCraftables();
             Player = new(name: "Player", level: 1, experience: 0, xpToLevel: 100, health: 100, maxHealth: 100, mana: 50, maxMana: 50, minDamage: 1, maxDamage: 10, spellAdjust: 1f, critChance: 5, defense: 0, magicResist: 0, essence: 0, currentWeapon: null, headSlot: null, bodySlot: null, offHand: null, neckSlot: null, ringSlot: null, currentLocation: MapManager.survivorsRetreat);
+            Player.Inventory.Add(ItemManager.smallHealthPotion);
+            Player.Inventory.Add(ItemManager.smallHealthPotion);
+            Player.Inventory.Add(ItemManager.smallHealthPotion);
+            Player.Inventory.Add(ItemManager.smallHealthPotion);
+            Player.Inventory.Add(ItemManager.smallManaPotion);
+            Player.Inventory.Add(ItemManager.smallManaPotion);
+            Player.Spells.Add(ItemManager.heal);
+            Player.Spells.Add(ItemManager.flame);
         }
 
         public bool MonsterFound()

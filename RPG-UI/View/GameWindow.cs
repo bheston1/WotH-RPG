@@ -202,6 +202,10 @@ namespace RPG_UI
                     rtbLog.Text = $"Not enough mana to cast {selected.Name}!";
                 }
             }
+            else
+            {
+                rtbLog.Text = "No spell!";
+            }
             UpdateGUI();
         }
 
