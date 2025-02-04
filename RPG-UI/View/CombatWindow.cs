@@ -256,7 +256,7 @@ namespace RPG_UI.View
             btnItemsCombat.Enabled = false;
             cboItems.Enabled = false;
             Message($"{_monster.Name} slain.\nGained {_monster.RewardXp} XP and {_monster.RewardEssence} essence.");
-            _player.Experience += _monster.RewardXp;
+            _player.AddXP(_monster.RewardXp);
             _player.Essence += _monster.RewardEssence;
         }
 

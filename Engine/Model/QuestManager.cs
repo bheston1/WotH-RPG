@@ -21,8 +21,6 @@ namespace Engine.Model
 
         public static Quest hollowsBane = new Quest(name: "The Hollow's Bane", infoText: "Kill a dangerous creature in the Whispering Groves.", rewardExperience: 750, rewardEssence: 1000, isCompleted: false, rewardItem: null);
 
-        public static Quest forgottenShrine = new Quest(name: "The Forgotten Shrine", infoText: "Solve the puzzle within the shrine to reveal its secrets.", rewardExperience: 250, rewardEssence: 250, isCompleted: false, rewardItem: null);
-
         public static Quest unseenHunter = new Quest(name: "The Unseen Hunter", infoText: "Track down a mysterious predator in Hollow's Edge.", rewardExperience: 500, rewardEssence: 1000, isCompleted: false, rewardItem: null);
     }
 }

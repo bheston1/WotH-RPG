@@ -17,6 +17,7 @@ namespace RPG_UI
             Controller.Player.Name = _playerName;
             UpdateGUI();
             rtbLog.Text = "You arrive at the edge of the Hollow, drawn by a mysterious force. The once-thriving village near the forest is now abandoned, and only the reanimated corpses and cursed spirits of the villagers remain. At the entrance to the forest you see a camp. There are survivors here.";
+            Controller.Player.OnLevelUp += Player_OnLevelUp;
         }
 
         private void StartCombat(Monster monster)
@@ -34,15 +35,33 @@ namespace RPG_UI
             lblLocation.Text = $"{Controller.Player.CurrentLocation.MapArea.Name}";
             lblPlayerName.Text = Controller.Player.Name;
             lblPlayerLevel.Text = $"{Controller.Player.Level}";
-            lblPlayerXp.Text = $"{Controller.Player.Experience}/{Controller.Player.XpToLevel}";
             lblPlayerHealth.Text = $"{Controller.Player.Health}/{Controller.Player.MaxHealth}";
             lblPlayerMana.Text = $"{Controller.Player.Mana}/{Controller.Player.MaxMana}";
             lblPlayerEssence.Text = $"{Controller.Player.Essence}";
 
+            UpdateXpCounter();
             UpdateHealthBar();
             ToggleNavButtons();
             ToggleAreaButtons();
             PopulateCbos();
+        }
+
+        private void Player_OnLevelUp(int newLevel)
+        {
+            MessageBox.Show($"You reached level {newLevel}!");
+            UpdateGUI();
+        }
+
+        private void UpdateXpCounter()
+        {
+            if (Controller.Player.Level < Controller.Player.MaxLevel)
+            {
+                lblPlayerXp.Text = $"{Controller.Player.Experience}/{Controller.Player.GetXpToLevel()}";
+            }
+            else
+            {
+                lblPlayerXp.Text = "Level cap reached";
+            }
         }
 
         private void ToggleAreaButtons()

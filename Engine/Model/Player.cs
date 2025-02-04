@@ -10,8 +10,23 @@ namespace Engine.Model
 {
     public class Player
     {
+        private readonly int[] experienceTable =
+        {
+            0,
+            7,
+            23,
+            47,
+            110,
+            220,
+            450,
+            800,
+            1300,
+            2000
+        };
+
         public string Name { get; set; }
         public int Level { get; set; }
+        public int MaxLevel { get; set; }
         public int Experience { get; set; }
         public int XpToLevel { get; set; }
         public int Health { get; set; }
@@ -38,10 +53,11 @@ namespace Engine.Model
         public Room CurrentLocation { get; set; }
         public bool HasRequiredItem = true;
 
-        public Player(string name, int level, int experience, int xpToLevel, int health, int maxHealth, int mana, int maxMana, int minDamage, int maxDamage, float spellAdjust, int critChance, int defense, int magicResist, int essence, Weapon? currentWeapon, Armor? headSlot, Armor? bodySlot, Armor? offHand, Jewelry? neckSlot, Jewelry? ringSlot, Room currentLocation)
+        public Player(string name, int level, int maxLevel, int experience, int xpToLevel, int health, int maxHealth, int mana, int maxMana, int minDamage, int maxDamage, float spellAdjust, int critChance, int defense, int magicResist, int essence, Weapon? currentWeapon, Armor? headSlot, Armor? bodySlot, Armor? offHand, Jewelry? neckSlot, Jewelry? ringSlot, Room currentLocation)
         {
             Name = name;
             Level = level;
+            MaxLevel = maxLevel;
             Experience = experience;
             XpToLevel = xpToLevel;
             Health = health;
@@ -66,6 +82,138 @@ namespace Engine.Model
             Spells = new();
             QuestLog = new();
             Consumables = new();
+        }
+
+        public event Action<int> OnLevelUp;
+
+        public void AddXP(int amount)
+        {
+            Experience += amount;
+            CheckForLevelUp();
+        }
+
+        private void CheckForLevelUp()
+        {
+            while (Level < experienceTable.Length - 1 && Experience >= experienceTable[Level])
+            {
+                Level++;
+                ApplyLevelBonuses();
+                OnLevelUp?.Invoke(Level);
+            }
+        }
+
+        private void ApplyLevelBonuses()
+        {
+            switch (Level)
+            {
+                case 2:
+                    MaxHealth += 3;
+                    MinDamage += 1;
+                    MaxDamage += 1;
+                    break;
+
+                case 3:
+                    if (!Spells.Contains(ItemManager.heal))
+                    {
+                        Spells.Add(ItemManager.heal);
+                    }
+                    MaxHealth += 4;
+                    MinDamage += 2;
+                    MaxDamage += 2;
+                    MaxMana += 3;
+                    break;
+
+                case 4:
+                    MaxHealth += 2;
+                    MinDamage += 1;
+                    MaxDamage += 1;
+                    MaxMana += 3;
+                    break;
+
+                case 5:
+                    MaxHealth += 4;
+                    MinDamage += 3;
+                    MaxDamage += 3;
+                    MaxMana += 6;
+                    break;
+
+                case 6:
+                    if (!Spells.Contains(ItemManager.flame))
+                    {
+                        Spells.Add(ItemManager.flame);
+                    }
+                    MaxHealth += 3;
+                    MinDamage += 2;
+                    MaxDamage += 2;
+                    MaxMana += 6;
+                    break;
+
+                case 7:
+                    MaxHealth += 3;
+                    MinDamage += 1;
+                    MaxDamage += 1;
+                    MaxMana += 9;
+                    break;
+
+                case 8:
+                    MaxHealth += 5;
+                    MinDamage += 3;
+                    MaxDamage += 3;
+                    MaxMana += 9;
+                    break;
+
+                case 9:
+                    MaxHealth += 5;
+                    MinDamage += 2;
+                    MaxDamage += 2;
+                    MaxMana += 12;
+                    break;
+
+                case 10:
+                    MaxHealth += 6;
+                    MinDamage += 3;
+                    MaxDamage += 3;
+                    MaxMana += 12;
+                    break;
+            }
+        }
+        
+        public int GetXpToLevel()
+        {
+            switch (Level)
+            {
+                case 1:
+                    return experienceTable[1];
+
+                case 2:
+                    return experienceTable[2];
+
+                case 3:
+                    return experienceTable[3];
+
+                case 4:
+                    return experienceTable[4];
+
+                case 5:
+                    return experienceTable[5];
+
+                case 6:
+                    return experienceTable[6];
+
+                case 7:
+                    return experienceTable[7];
+
+                case 8:
+                    return experienceTable[8];
+
+                case 9:
+                    return experienceTable[9];
+
+                case 10:
+                    return experienceTable[10];
+            }
+
+            return 0;
         }
 
         public int Hurt(int damage, int magicDamage)

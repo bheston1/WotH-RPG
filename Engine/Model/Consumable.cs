@@ -31,11 +31,6 @@ namespace Engine.Model
                     player.Inventory.Remove(this);
                     break;
 
-                case "Add Spell: Heal":
-                    if (!player.Spells.Contains(ItemManager.heal)) player.Spells.Add(ItemManager.heal);
-                    player.Inventory.Remove(this);
-                    break;
-
                 default:
                     Console.WriteLine("Nothing happens.");
                     break;
